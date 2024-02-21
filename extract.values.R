@@ -165,3 +165,6 @@ write.csv2(mari_pts_t, paste0(getwd(),'/05_output/mari_pts.csv'))
 st_write(mari_pts_t, paste0(getwd(),'/05_output/mari_pts.gpkg'),
          layer = "mari_derived_vars")
 
+#save column names and add variable descriptions
+var_description <- colnames(mari_pts_t)
+write.csv2(var_description, paste0(getwd(),'/05_output/var_description.csv'))

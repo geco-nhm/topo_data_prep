@@ -20,10 +20,11 @@ The file [data_prep_execute.R](data_prep_execute.R) is calling sub-functions in 
 7. **Tree Density Index** : It calculates tree density indices at different resolutions by sourcing a custom function [tree.density.R](tree.density.R). This involves running the function for multiple pixel sizes to achieve resolutions of 1m, 3m, and 9m.
 
 8. **Resampling**: The script resamples the derived rasters for three different resolutions (1, 5, and 9 meters) and saves the resampled rasters in a specified directory [resample.raster.R](resample.raster.R).
+  - note that 
 
 
 
-### Functions Used in [derive.vars.R](derive.vars.R)
+### Functions Used in file [derive.vars.R](derive.vars.R)
 1. `rsaga.slope.asp.curv`
 2. `rsaga.wetness.index`
 3. `rsaga.hillshade`
@@ -40,7 +41,7 @@ The code is structured to perform multiple geospatial analyses using RSAGA funct
   - Slope (`_slope.tif`)
     - Represents the steepness or degree of incline of the terrain. The slope is measured in degrees from the horizontal. Higher values indicate steeper terrain. Slope is a key factor in hydrology, soil erosion, vegetation distribution, and landform development.
   - Aspect (`_aspect.tif`)
-    - Denotes the compass direction that a terrain surface faces. Aspect is measured in degrees from North (0°), with East at 90°, South at 180°, and West at 270°. Aspect can influence microclimate conditions like sunlight exposure and moisture retention.
+    - Denotes the compass direction that a terrain surface faces. Aspect is measured in degrees from North (0B0), with East at 90B0, South at 180B0, and West at 270B0. Aspect can influence microclimate conditions like sunlight exposure and moisture retention.
   - Convergence Index (`_cgene.tif`)
     - Indicates areas of convergent and divergent flow on a landscape. Positive values typically represent convergent features like valleys or depressions, where water might accumulate. Negative values suggest divergent features like ridges or hilltops.
   - Profile Curvature (`_cprof.tif`)
@@ -62,7 +63,7 @@ The code is structured to perform multiple geospatial analyses using RSAGA funct
 - **Purpose:** Creates a hillshade raster from the DEM using the Analytical Hillshading method.
 - **Output:** Hillshade (`_hillshade.tif`)
     - A shaded relief map providing a 3D visual effect of terrain. It's created by simulating illumination over the terrain surface. Hillshade helps in visualizing and analyzing terrain features like slopes, ridges, valleys, and patterns of landform.
-- **Parameters:** Standard method, Azimuth 315°, Declination 45°, Exaggeration factor 4
+- **Parameters:** Standard method, Azimuth 315B0, Declination 45B0, Exaggeration factor 4
 - **Reference:** [RSAGA Documentation - rsaga.hillshade](https://www.rdocumentation.org/packages/RSAGA/versions/1.4.0/topics/rsaga.hillshade)
 
 #### 4. Solar Radiation Analysis (Summer Period)
@@ -90,7 +91,12 @@ The code is structured to perform multiple geospatial analyses using RSAGA funct
 
 
 ### Function [tree.density.R](tree.density.R)
-this part of the script calculates canopy height, separates vegetation above 1m, calculates mean canopy height and tree density, making use of raster data operations and moving window analysis.
+this part of the script calculates canopy height, separates vegetation above 1m, calculates tree density, making use of a moving window analysis with variable size and equal weight.
+The size of the window iterates between 1m, 5m and 9m, which is specified by the suffix `_9`, `_49`, and `_89` symbolizing the side of the matrix (has to be odd number). 
+1m - focal window using matrix with the side of`_9` pixels (0.1m) around the focal pixel
+5m - focal window using matrix with the side of`_49` pixels (0.1m) around the focal pixel
+9m - focal window using matrix with the side of`_89` pixels (0.1m) around the focal pixel
+
 #### 1. Sub-functions
 - **meanFunction**
   - **Description:** Calculates the mean of input values, ignoring `NA` values. This function is likely used to compute average values within a specified area or window.
@@ -107,11 +113,16 @@ this part of the script calculates canopy height, separates vegetation above 1m,
     - Computes the mean number of canopy pixels (above 1m) within each window.
     - Calculates canopy density using the `canopyRatio` function, indicating the proportion of canopy cover within each window.
 - **Outputs:** The function produces several outputs:
-  - `chm`: Canopy Height Model indicating the height of vegetation above the ground.
-  - `veg_1`: Binary raster indicating presence of vegetation above 1m.
-  - `mean_chm`: Mean count of canopy pixels (above 1m) within the moving window across the study area.
-  - `chm_density_1`: Canopy density calculated as the ratio of canopy cells to total cells in each moving window.
+  - `_chm.tif`: Canopy Height Model indicating the height of vegetation above the ground.
+  - `_veg.tif`: Binary raster indicating presence of vegetation above 1m.
+  - `_chm_density.tif`: Canopy density calculated as the ratio of canopy cells to total cells in each moving window._
 
+
+### Function [resample.raster.R](resample.raster.R)
+This function is used for resampling raster images. It takes a TIFF file path and a target resolution as inputs, then resamples the raster to the specified resolution. Aggregation factor is calculated as the required resolution (1,5,9m) divided by the input raster resolution. 
+
+ - **Outputs:** raster with a prefix of the requested resolution `X1m_`, `X5m_`, `X9m_`.
+ 
 
 ### File [extract.values.R](extract.values.R)
 at the end, we exctract values to points at different resolutions. 
@@ -146,6 +157,6 @@ at the end, we exctract values to points at different resolutions.
 7. **Writing Output to CSV**:
    - Finally, the combined dataframes for INA and MARI sites are written to CSV files in the `05_output` directory.
 
-This script demonstrates advanced data manipulation involving spatial data and raster layers, tailored for ecological or geographical data processing. It efficiently handles multiple datasets, applies conditional logic for data transformation, and aggregates results into cohesive outputs.
 
-##### this documentation was created with the help of Chat GPT
+
+##### *this documentation was created with the help of Chat GPT*

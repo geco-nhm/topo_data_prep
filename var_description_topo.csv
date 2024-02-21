@@ -1,0 +1,80 @@
+ID;Variable_Name;Raster_resolution_M;Description base;Description full
+1;plot_id;;Unique identifier for each plot in the study;Unique identifier for each plot in the study
+2;site;;Geographical location or site of the study area;Geographical location or site of the study area
+3;49_chm_density_above1m;0.1;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels) ;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels)  at original resolution of  0.1 m
+4;49_mean_above1m;0.1;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels) ;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels)  at original resolution of  0.1 m
+5;89_chm_density_above1m;0.1;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels) ;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels)  at original resolution of  0.1 m
+6;89_mean_above1m;0.1;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels) ;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels)  at original resolution of  0.1 m
+7;9_chm_density_above1m;0.1;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels) ;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels)  at original resolution of  0.1 m
+8;9_mean_above1m;0.1;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels) ;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels)  at original resolution of  0.1 m
+9;aspect;0.1;aspect;aspect at original resolution of  0.1 m
+10;catch_area;0.1;catchment area;catchment area at original resolution of  0.1 m
+11;cgene;0.1;convergence index;convergence index at original resolution of  0.1 m
+12;chm;0.1;canopy height model;canopy height model at original resolution of  0.1 m
+13;cplan;0.1;plan curvature;plan curvature at original resolution of  0.1 m
+14;cprof;0.1;profile curvature;profile curvature at original resolution of  0.1 m
+15;hillshade;0.1;hillshade;hillshade at original resolution of  0.1 m
+16;insolation.diffuse;0.1;diffuse solar radiation;diffuse solar radiation at original resolution of  0.1 m
+17;insolation.direct;0.1;direct solar radiation;direct solar radiation at original resolution of  0.1 m
+18;insolation.total;0.1;total solar radiation;total solar radiation at original resolution of  0.1 m
+19;slope;0.1;slope;slope at original resolution of  0.1 m
+20;swi;0.1;soil wetness index;soil wetness index at original resolution of  0.1 m
+21;veg_above1m;0.1;vegetation above 1m binary ;vegetation above 1m binary  at original resolution of  0.1 m
+22;X1m_49_chm_density_above1m;1;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels) ;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels)  resampled to 1 m
+23;X1m_49_mean_above1m;1;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels) ;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels)  resampled to 1 m
+24;X1m_89_chm_density_above1m;1;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels) ;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels)  resampled to 1 m
+25;X1m_89_mean_above1m;1;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels) ;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels)  resampled to 1 m
+26;X1m_9_chm_density_above1m;1;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels) ;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels)  resampled to 1 m
+27;X1m_9_mean_above1m;1;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels) ;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels)  resampled to 1 m
+28;X1m_aspect;1;aspect;aspect resampled to 1 m
+29;X1m_catch_area;1;catchment area;catchment area resampled to 1 m
+30;X1m_cgene;1;convergence index;convergence index resampled to 1 m
+31;X1m_chm;1;canopy height model;canopy height model resampled to 1 m
+32;X1m_cplan;1;plan curvature;plan curvature resampled to 1 m
+33;X1m_cprof;1;profile curvature;profile curvature resampled to 1 m
+34;X1m_hillshade;1;hillshade;hillshade resampled to 1 m
+35;X1m_insolation.diffuse;1;diffuse solar radiation;diffuse solar radiation resampled to 1 m
+36;X1m_insolation.direct;1;direct solar radiation;direct solar radiation resampled to 1 m
+37;X1m_insolation.total;1;total solar radiation;total solar radiation resampled to 1 m
+38;X1m_slope;1;slope;slope resampled to 1 m
+39;X1m_swi;1;soil wetness index;soil wetness index resampled to 1 m
+40;X1m_veg_above1m;1;vegetation above 1m binary ;vegetation above 1m binary  resampled to 1 m
+41;X5m_49_chm_density_above1m;5;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels) ;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels)  resampled to 5 m
+42;X5m_49_mean_above1m;5;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels) ;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels)  resampled to 5 m
+43;X5m_89_chm_density_above1m;5;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels) ;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels)  resampled to 5 m
+44;X5m_89_mean_above1m;5;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels) ;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels)  resampled to 5 m
+45;X5m_9_chm_density_above1m;5;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels) ;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels)  resampled to 5 m
+46;X5m_9_mean_above1m;5;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels) ;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels)  resampled to 5 m
+47;X5m_aspect;5;aspect;aspect resampled to 5 m
+48;X5m_catch_area;5;catchment area;catchment area resampled to 5 m
+49;X5m_cgene;5;convergence index;convergence index resampled to 5 m
+50;X5m_chm;5;canopy height model;canopy height model resampled to 5 m
+51;X5m_cplan;5;plan curvature;plan curvature resampled to 5 m
+52;X5m_cprof;5;profile curvature;profile curvature resampled to 5 m
+53;X5m_hillshade;5;hillshade;hillshade resampled to 5 m
+54;X5m_insolation.diffuse;5;diffuse solar radiation;diffuse solar radiation resampled to 5 m
+55;X5m_insolation.direct;5;direct solar radiation;direct solar radiation resampled to 5 m
+56;X5m_insolation.total;5;total solar radiation;total solar radiation resampled to 5 m
+57;X5m_slope;5;slope;slope resampled to 5 m
+58;X5m_swi;5;soil wetness index;soil wetness index resampled to 5 m
+59;X5m_veg_above1m;5;vegetation above 1m binary ;vegetation above 1m binary  resampled to 5 m
+60;X9m_49_chm_density_above1m;9;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels) ;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels)  resampled to 9 m
+61;X9m_49_mean_above1m;9;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels) ;vegetation density accounting for canopy height above 1m with moving window 5m (49pixels)  resampled to 9 m
+62;X9m_89_chm_density_above1m;9;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels) ;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels)  resampled to 9 m
+63;X9m_89_mean_above1m;9;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels) ;vegetation density accounting for canopy height above 1m with moving window 9m (89pixels)  resampled to 9 m
+64;X9m_9_chm_density_above1m;9;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels) ;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels)  resampled to 9 m
+65;X9m_9_mean_above1m;9;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels) ;vegetation density accounting for canopy height above 1m with moving window 1m (9pixels)  resampled to 9 m
+66;X9m_aspect;9;aspect;aspect resampled to 9 m
+67;X9m_catch_area;9;catchment area;catchment area resampled to 9 m
+68;X9m_cgene;9;convergence index;convergence index resampled to 9 m
+69;X9m_chm;9;canopy height model;canopy height model resampled to 9 m
+70;X9m_cplan;9;plan curvature;plan curvature resampled to 9 m
+71;X9m_cprof;9;profile curvature;profile curvature resampled to 9 m
+72;X9m_hillshade;9;hillshade;hillshade resampled to 9 m
+73;X9m_insolation.diffuse;9;diffuse solar radiation;diffuse solar radiation resampled to 9 m
+74;X9m_insolation.direct;9;direct solar radiation;direct solar radiation resampled to 9 m
+75;X9m_insolation.total;9;total solar radiation;total solar radiation resampled to 9 m
+76;X9m_slope;9;slope;slope resampled to 9 m
+77;X9m_swi;9;soil wetness index;soil wetness index resampled to 9 m
+78;X9m_veg_above1m;9;vegetation above 1m binary ;vegetation above 1m binary  resampled to 9 m
+79;geometry;;Description not available;
